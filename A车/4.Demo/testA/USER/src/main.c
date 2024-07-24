@@ -39,6 +39,7 @@
 #define CH9143_UART_RX_PIN      UART6_RX_C1
 
 
+int wotianjialeyigebianliang = 0;
 int flagTIM = 0;
 int flagAllow = 0;
 int countTIM2;

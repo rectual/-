@@ -105,9 +105,9 @@ void TIM_init(void)
 
     TIM_TimeBaseInitTypeDef TIM_TimeBaseStructure;
     //TIM1所属的APB1频率为144MHz//503
-    TIM_TimeBaseStructure.TIM_Period =797- 1;            //自动装载值，到该值是计时器清0，并触发中断
+    TIM_TimeBaseStructure.TIM_Period =365- 1;            //自动装载值，到该值是计时器清0，并触发中断
     //144MHz / 144 = 1MHz 每秒两百万，数800下才对
-    TIM_TimeBaseStructure.TIM_Prescaler = 144 - 1;                //预分频值，首先分频为CK_PSC
+    TIM_TimeBaseStructure.TIM_Prescaler = 192 - 1;                //预分频值，首先分频为CK_PSC
     TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up; // 设置为向上计数模式
     TIM_TimeBaseStructure.TIM_RepetitionCounter=0;              //溢出后立即产生中断
     TIM_TimeBaseStructure.TIM_ClockDivision = TIM_CKD_DIV1; // 时钟分频设置，这里设为不分频，从CK_PSC分为CK_INT
@@ -121,7 +121,7 @@ void TIM_init(void)
 
     NVIC_InitTypeDef NVIC_InitStructure1;
     NVIC_InitStructure1.NVIC_IRQChannel = TIM8_UP_IRQn;  //  选择正确的中断通道
-    NVIC_InitStructure1.NVIC_IRQChannelPreemptionPriority = 0;
+    NVIC_InitStructure1.NVIC_IRQChannelPreemptionPriority = 1;
     NVIC_InitStructure1.NVIC_IRQChannelSubPriority = 1;
     NVIC_InitStructure1.NVIC_IRQChannelCmd = ENABLE;
     NVIC_Init(&NVIC_InitStructure1);

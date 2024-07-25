@@ -5,8 +5,8 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-D:/car/A\ 2/基础组摄像头资料（摄像头）资料A/4.Demo/testA/USER/src/isr.c \
-D:/car/A\ 2/基础组摄像头资料（摄像头）资料A/4.Demo/testA/USER/src/main.c 
+D:/car/newcar/A车/4.Demo/testA/USER/src/isr.c \
+D:/car/newcar/A车/4.Demo/testA/USER/src/main.c 
 
 OBJS += \
 ./user_c/isr.o \
@@ -18,10 +18,10 @@ C_DEPS += \
 
 
 # Each subdirectory must supply rules for building sources it contributes
-user_c/isr.o: D:/car/A\ 2/基础组摄像头资料（摄像头）资料A/4.Demo/testA/USER/src/isr.c
-	@	@	riscv-none-embed-gcc -march=rv32imac -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -Os -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wunused -Wuninitialized  -g -I"D:\car\A 2\基础组摄像头资料（摄像头）资料A\4.Demo\testA\CODE" -I"D:\car\A 2\基础组摄像头资料（摄像头）资料A\4.Demo\Libraries\hefei_libraries" -I"D:\car\A 2\基础组摄像头资料（摄像头）资料A\4.Demo\Libraries\hefei_libraries\board" -I"D:\car\A 2\基础组摄像头资料（摄像头）资料A\4.Demo\testA\USER\src" -I"D:\car\A 2\基础组摄像头资料（摄像头）资料A\4.Demo\testA\USER\inc" -I"D:\car\A 2\基础组摄像头资料（摄像头）资料A\4.Demo\Libraries\hefei_peripheral" -I"D:\car\A 2\基础组摄像头资料（摄像头）资料A\4.Demo\Libraries\Device\Core" -I"D:\car\A 2\基础组摄像头资料（摄像头）资料A\4.Demo\Libraries\Device\CH32V30x_p\CH32V30x_Lib" -I"D:\car\A 2\基础组摄像头资料（摄像头）资料A\4.Demo\Libraries\Device\CH32V30x_p\Startup" -std=gnu99 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -c -o "$@" "$<"
+user_c/isr.o: D:/car/newcar/A车/4.Demo/testA/USER/src/isr.c
+	@	@	riscv-none-embed-gcc -march=rv32imac -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -Os -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wunused -Wuninitialized  -g -I"D:\car\newcar\A车\4.Demo\testA\CODE" -I"D:\car\newcar\A车\4.Demo\Libraries\hefei_libraries" -I"D:\car\newcar\A车\4.Demo\Libraries\hefei_libraries\board" -I"D:\car\newcar\A车\4.Demo\testA\USER\src" -I"D:\car\newcar\A车\4.Demo\testA\USER\inc" -I"D:\car\newcar\A车\4.Demo\Libraries\hefei_peripheral" -I"D:\car\newcar\A车\4.Demo\Libraries\Device\Core" -I"D:\car\newcar\A车\4.Demo\Libraries\Device\CH32V30x_p\CH32V30x_Lib" -I"D:\car\newcar\A车\4.Demo\Libraries\Device\CH32V30x_p\Startup" -std=gnu99 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -c -o "$@" "$<"
 	@	@
-user_c/main.o: D:/car/A\ 2/基础组摄像头资料（摄像头）资料A/4.Demo/testA/USER/src/main.c
-	@	@	riscv-none-embed-gcc -march=rv32imac -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -Os -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wunused -Wuninitialized  -g -I"D:\car\A 2\基础组摄像头资料（摄像头）资料A\4.Demo\testA\CODE" -I"D:\car\A 2\基础组摄像头资料（摄像头）资料A\4.Demo\Libraries\hefei_libraries" -I"D:\car\A 2\基础组摄像头资料（摄像头）资料A\4.Demo\Libraries\hefei_libraries\board" -I"D:\car\A 2\基础组摄像头资料（摄像头）资料A\4.Demo\testA\USER\src" -I"D:\car\A 2\基础组摄像头资料（摄像头）资料A\4.Demo\testA\USER\inc" -I"D:\car\A 2\基础组摄像头资料（摄像头）资料A\4.Demo\Libraries\hefei_peripheral" -I"D:\car\A 2\基础组摄像头资料（摄像头）资料A\4.Demo\Libraries\Device\Core" -I"D:\car\A 2\基础组摄像头资料（摄像头）资料A\4.Demo\Libraries\Device\CH32V30x_p\CH32V30x_Lib" -I"D:\car\A 2\基础组摄像头资料（摄像头）资料A\4.Demo\Libraries\Device\CH32V30x_p\Startup" -std=gnu99 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -c -o "$@" "$<"
+user_c/main.o: D:/car/newcar/A车/4.Demo/testA/USER/src/main.c
+	@	@	riscv-none-embed-gcc -march=rv32imac -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -Os -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wunused -Wuninitialized  -g -I"D:\car\newcar\A车\4.Demo\testA\CODE" -I"D:\car\newcar\A车\4.Demo\Libraries\hefei_libraries" -I"D:\car\newcar\A车\4.Demo\Libraries\hefei_libraries\board" -I"D:\car\newcar\A车\4.Demo\testA\USER\src" -I"D:\car\newcar\A车\4.Demo\testA\USER\inc" -I"D:\car\newcar\A车\4.Demo\Libraries\hefei_peripheral" -I"D:\car\newcar\A车\4.Demo\Libraries\Device\Core" -I"D:\car\newcar\A车\4.Demo\Libraries\Device\CH32V30x_p\CH32V30x_Lib" -I"D:\car\newcar\A车\4.Demo\Libraries\Device\CH32V30x_p\Startup" -std=gnu99 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -c -o "$@" "$<"
 	@	@
 

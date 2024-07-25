@@ -39,10 +39,10 @@
 #define CH9143_UART_RX_PIN      UART6_RX_C1
 
 
-int wotianjialeyigebianliang = 0;
+int endDistance = 0;
 int flagTIM = 0;
 int flagAllow = 0;
-int countTIM2;
+int countTIM2 = 0;
 int isTOF = 0;
 int continueflag = 0;
 int countTIM3;
@@ -120,11 +120,15 @@ int main(void)
     while(1)
     {
         if(flagTIM == 0){
-            get_dis = Get_Distance_TOF400C();
-            if(get_dis <= 300 && flagTIM == 0 && count_tri == 1 ){
-//                motor_forward(left, 0);
-//                            motor_forward(right, 0);
-//                            while(1);
+//            get_dis = Get_Distance_TOF400C();
+//            if(get_dis <= 300 && flagTIM == 0 && count_tri == 1 ){
+////                motor_forward(left, 0);
+////                            motor_forward(right, 0);
+////                            while(1);
+//                TIM_Cmd(TIM1, ENABLE);
+//                flagTIM = 1;
+//            }
+            if(count_tri == 1 && flag == 0){
                 TIM_Cmd(TIM1, ENABLE);
                 flagTIM = 1;
             }

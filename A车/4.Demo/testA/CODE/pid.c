@@ -137,17 +137,17 @@ void pid_forward_move(float error,PID *Lpid,PID *Rpid,int flag)
         motor_forward(left,car_mode[flag].speed  + Car_PID_ERROR(Lpid,-error,flag));
         motor_forward(right,car_mode[flag].speed  + Car_PID_ERROR(Rpid,error,flag));
     }
-    else if(count_tri != 1){
+    else if((count_tri != 1 && count_tri != 2) || endDistance ){
 
         motor_forward(left,car_mode[flag].speed  - 0 * (triangle_flag == 1) - 0 * (finalLow >= 10) - 0 * (finalLow >= 10 && flag == 0) - 1300 * (count_tri >= 2 && flag != 5) - 1350 * (rightangle_flag && count_tri < 2) + Car_PID_ERROR(Lpid,-error,flag));
-        motor_forward(right,car_mode[flag].speed - 0 * (triangle_flag == 1) - 0 * (finalLow >= 10) - 0 * (finalLow >= 10 && flag == 0) - 1300 * (count_tri >= 2  && flag != 5) - 1250 * (rightangle_flag && count_tri < 2) + Car_PID_ERROR(Rpid,error,flag));
+        motor_forward(right,car_mode[flag].speed - 0 * (triangle_flag == 1) - 0 * (finalLow >= 10) - 0 * (finalLow >= 10 && flag == 0) - 1300 * (count_tri >= 2  && flag != 5) - 1350 * (rightangle_flag && count_tri < 2) + Car_PID_ERROR(Rpid,error,flag));
 
     }
 
     else if(flag != 5 ){
-        flag = 6;
+        flag = 6 + flag;
 //        distance_speedL = car_mode[flag].speed - 500 * ( isTOF ) +Car_PID_ERROR(Lpid,-error,flag);
-        distance_speedL = 6500;
+        distance_speedL = 4500;
         distance_speedR = car_mode[flag].speed  + Car_PID_ERROR(Rpid,error,flag);
         motor_forward(left, distance_speedL);
         motor_forward(right, distance_speedR);

@@ -111,7 +111,7 @@ void motor_forward(left_or_right object, uint16 value)
     if(object == left)
     {
         pwm_duty(L_PWM_F, value);
-        ips114_show_int(200,100,value,6);
+//        ips114_show_int(200,100,value,6);
         pwm_duty(L_PWM_B, 0);
         return;
     }
@@ -130,21 +130,19 @@ void motor_forward(left_or_right object, uint16 value)
             pwm_duty(L_PWM_B, 3000);//左轮电机反转
             pwm_duty(R_PWM_F, 3000);
             pwm_duty(R_PWM_B, 0);//右轮电机正转
-            Delay_Ms(510);
-
-
-            pwm_duty(L_PWM_F, 0);
-            pwm_duty(R_PWM_F,0);
+            Delay_Ms(520);
 
 
             pwm_duty(L_PWM_B, 0);
-            pwm_duty(R_PWM_B, 0);
+            pwm_duty(R_PWM_F,0);
+
+
             //while(1);
 
         }
 
         pwm_duty(R_PWM_F, value);
-        ips114_show_int(200,120,value,6);
+//        ips114_show_int(200,120,value,6);
         pwm_duty(R_PWM_B, 0);
 
     }

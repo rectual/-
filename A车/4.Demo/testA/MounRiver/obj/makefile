@@ -56,7 +56,7 @@ all: testA.elf secondary-outputs
 
 # 工具调用
 testA.elf: $(OBJS) $(USER_OBJS)
-	@	@	riscv-none-embed-gcc -march=rv32imac -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -Os -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wunused -Wuninitialized  -g -T "D:\car\A 2\基础组摄像头资料（摄像头）资料A\4.Demo\testA\MounRiver\Link.ld" -nostartfiles -Xlinker --gc-sections -Wl,-Map,"testA.map" --specs=nano.specs --specs=nosys.specs -o "testA.elf" $(OBJS) $(USER_OBJS) $(LIBS)
+	@	@	riscv-none-embed-gcc -march=rv32imac -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -Os -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wunused -Wuninitialized  -g -T "D:\car\newcar\A车\4.Demo\testA\MounRiver\Link.ld" -nostartfiles -Xlinker --gc-sections -Wl,-Map,"testA.map" --specs=nano.specs --specs=nosys.specs -o "testA.elf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@	@
 testA.hex: testA.elf
 	@	riscv-none-embed-objcopy -O ihex "testA.elf"  "testA.hex"

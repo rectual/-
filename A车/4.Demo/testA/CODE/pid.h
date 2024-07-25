@@ -31,24 +31,24 @@ int error;//偏差
 
 //普通pid
 //直线PID速度参数
-#define   Straight_PID_P     30//45
+#define   Straight_PID_P     45//45
 #define   Straight_PID_I     0//0
-#define   Straight_PID_D     20 //30
+#define   Straight_PID_D     30 //30
 
 #define   Straight_SPEED     8000//7300
 
 //弯道PID速度参数
-#define   Bend_PID_P     75//70
+#define   Bend_PID_P     85//70
 #define   Bend_PID_I     0//
-#define   Bend_PID_D     80//60
+#define   Bend_PID_D     120//60
 
 
 #define   Bend_SPEED     7000//6750
 
 //S弯
 #define   S_PID_P     80
-#define   S_PID_I     12
-#define   S_PID_D     200 //30
+#define   S_PID_I     0
+#define   S_PID_D     240 //30
 
 #define   S_SPEED     7400
 
@@ -57,14 +57,14 @@ int error;//偏差
 #define   distance_PID_IF     0
 #define   distance_PID_DF     180 //30
 
-#define   distance_SPEEDF     6000
+#define   distance_SPEEDF     4000
 
 //测距直道
 #define   distance_PID_PI     40
 #define   distance_PID_II     0
 #define   distance_PID_DI     20 //30
 
-#define   distance_SPEEDI     6000
+#define   distance_SPEEDI     4000
 
 
 //十字PID速度参数

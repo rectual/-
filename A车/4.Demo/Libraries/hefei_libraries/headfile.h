@@ -77,4 +77,6 @@ extern int finalLow;
 extern int minusSpeed;
 extern int crossDelay;
 extern int continueflag;
+extern int countTIM2;
+extern int endDistance;
 #endif /* HEADFILE_H_ */

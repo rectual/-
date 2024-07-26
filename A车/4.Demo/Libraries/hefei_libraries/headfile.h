@@ -79,4 +79,5 @@ extern int crossDelay;
 extern int continueflag;
 extern int countTIM2;
 extern int endDistance;
+extern double S2;
 #endif /* HEADFILE_H_ */

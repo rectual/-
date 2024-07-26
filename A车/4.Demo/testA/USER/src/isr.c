@@ -294,18 +294,23 @@ void TIM1_UP_IRQHandler(void)
     if(TIM_GetITStatus(TIM1, TIM_IT_Update) != RESET)
        {
            countTIM2++;
+//           if(count_tri == 1 && S2 < 1 && S2 > -1){
+//              pwm_duty(L_PWM_F, 0);
+//              pwm_duty(R_PWM_F, 0);
+//              Delay_Ms(500);
+//           }
            if(flag == 1 && count_tri == 1 && countTIM1 == 0) countTIM2 = 0;
            get_dis = Get_Distance_TOF400C();
            if (get_dis <= 400) countTIM1++;
-           else if( count_tri >= 1 && count_tri != 2 && get_dis > 500 && countTIM1) count_tri++;
+           else if( count_tri >= 1 && count_tri != 2 && get_dis > 500 && countTIM1 >= 100) count_tri++;
            else if ( get_dis  > 500 && flag != 0 && count_tri == 2){
                ips114_show_int(200, 80, (int)(countTIM1/3) , 7);
                ips114_show_int(200, 100, (int)(countTIM2/3) , 7);
-               ips114_show_int(200, 120, (int)(countTIM1 * 1714 / countTIM2) , 7);
+               ips114_show_int(200, 120, (int)(countTIM1 * 1709 / countTIM2) , 7);
                endDistance = 1;
-               pwm_duty(L_PWM_F, 0);
-               pwm_duty(R_PWM_F, 0);
-               Delay_Ms(500);
+//               pwm_duty(L_PWM_F, 0);
+//               pwm_duty(R_PWM_F, 0);
+//               Delay_Ms(500);
                TIM_Cmd(TIM1, DISABLE);
                isTOF = 0;
            }

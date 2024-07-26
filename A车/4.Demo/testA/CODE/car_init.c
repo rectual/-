@@ -105,7 +105,7 @@ void TIM_init(void)
 
     TIM_TimeBaseInitTypeDef TIM_TimeBaseStructure;
     //TIM1所属的APB1频率为144MHz//503
-    TIM_TimeBaseStructure.TIM_Period =365- 1;            //自动装载值，到该值是计时器清0，并触发中断
+    TIM_TimeBaseStructure.TIM_Period =365 - 1;            //自动装载值，到该值是计时器清0，并触发中断
     //144MHz / 144 = 1MHz 每秒两百万，数800下才对
     TIM_TimeBaseStructure.TIM_Prescaler = 192 - 1;                //预分频值，首先分频为CK_PSC
     TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up; // 设置为向上计数模式

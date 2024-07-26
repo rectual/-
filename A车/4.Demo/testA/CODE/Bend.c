@@ -9,7 +9,6 @@ int check_bend()
   {
       int i;
       double num=0;
-      double S2=0;
       double average_x=0,total=0;
 
 
@@ -357,7 +356,7 @@ int check_black_white_line()
     if(triangle_flag==1)//过了三岔再识别斑马线
     {
             //找斑马线，每找到一次
-        for(i = 40;i<=100;i++)
+        for(i = 50;i<=100;i++)
         {
                count=0;
                for(j = 0;j<187;j++)

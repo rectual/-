@@ -57,14 +57,14 @@ int error;//偏差
 #define   distance_PID_IF     0
 #define   distance_PID_DF     180 //30
 
-#define   distance_SPEEDF     4000
+#define   distance_SPEEDF     4500
 
 //测距直道
 #define   distance_PID_PI     40
 #define   distance_PID_II     0
 #define   distance_PID_DI     20 //30
 
-#define   distance_SPEEDI     4000
+#define   distance_SPEEDI     4500
 
 
 //十字PID速度参数

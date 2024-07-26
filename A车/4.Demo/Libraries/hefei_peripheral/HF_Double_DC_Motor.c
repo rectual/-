@@ -46,7 +46,7 @@ void motor_init(left_or_right object)
 void motor_forward(left_or_right object, uint16 value)
 {
     if(flag != 6 && count_tri != 1 && value > minusSpeed * 250){
-        value -= minusSpeed * 250;
+        value += minusSpeed * 250;
     }
     if (value >= 9800)
         value = 9800;
@@ -141,9 +141,12 @@ void motor_forward(left_or_right object, uint16 value)
 
         }
 
-        pwm_duty(R_PWM_F, value);
+        else {
+                    pwm_duty(R_PWM_F, value);
 //        ips114_show_int(200,120,value,6);
         pwm_duty(R_PWM_B, 0);
+        }
+
 
     }
 }

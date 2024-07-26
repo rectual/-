@@ -52,6 +52,7 @@ int more_count_tri = 0;
 int speedLow = 0;
 int minusSpeed = 0;
 int crossDelay = 0;
+double S2=0;
 
 /* 主函数 */
 int main(void)
@@ -192,7 +193,7 @@ int main(void)
             //入库
             motor_forward(left, 5000);
             motor_forward(right, 4500);
-            Delay_Ms(500);
+            Delay_Ms(455);
             motor_forward(right, 4500);
             motor_forward(left, 0);
             Delay_Ms(250);

@@ -139,8 +139,8 @@ void pid_forward_move(float error,PID *Lpid,PID *Rpid,int flag)
     }
     else if((count_tri != 1 && count_tri != 2) || endDistance ){
 
-        motor_forward(left,car_mode[flag].speed  - 0 * (triangle_flag == 1) - 0 * (finalLow >= 10) - 0 * (finalLow >= 10 && flag == 0) - 1300 * (count_tri >= 2 && flag != 5) - 1350 * (rightangle_flag && count_tri < 2) + Car_PID_ERROR(Lpid,-error,flag));
-        motor_forward(right,car_mode[flag].speed - 0 * (triangle_flag == 1) - 0 * (finalLow >= 10) - 0 * (finalLow >= 10 && flag == 0) - 1300 * (count_tri >= 2  && flag != 5) - 1350 * (rightangle_flag && count_tri < 2) + Car_PID_ERROR(Rpid,error,flag));
+        motor_forward(left,car_mode[flag].speed  - 0 * (triangle_flag == 1) - 0 * (finalLow >= 10) - 500 * (finalLow >= 10 && flag == 0) - 1300 * (count_tri >= 2 && flag != 5) - 1350 * (rightangle_flag && count_tri < 2) + Car_PID_ERROR(Lpid,-error,flag));
+        motor_forward(right,car_mode[flag].speed - 0 * (triangle_flag == 1) - 0 * (finalLow >= 10) - 500 * (finalLow >= 10 && flag == 0) - 1300 * (count_tri >= 2  && flag != 5) - 1350 * (rightangle_flag && count_tri < 2) + Car_PID_ERROR(Rpid,error,flag));
 
     }
 
